@@ -55,7 +55,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
     - A lehetséges válaszok képei. A felhasználó az egyik **képre koppintással** dönti el, hogy szerinte melyik a helyes.
 - **Kiértékelő oldal**:
   - A felhasználó megtudja a helyes válaszainak számát, illetve az összes kérdés számát.
-  - Az elért pontszám arányában véletlenszerű üzenetet kap. 25% alatt, 26-50%, 51-75% között és 75% fölött más-más az üzenet.
+  - Az elért pontszám arányában véletlenszerű üzenetet kap.
   - Visszatérés gomb az üdvözlő képernyőre.
 - A kvíz az első oldal, vagyis az üdvözlő képernyő kivételével **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn. Amennyiben a felhasználó már egy kérdést tartalmazó oldalon van, megerősítő felület jelenik meg: kilépek/folytatom. A kilépekre koppintás esetén visszatér az üdvözlő képernyőre.
  
@@ -75,7 +75,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
 - **nehézségi szint létrehozása** -> esetünkben a nehézségi szint egyenlő az önálló kvízzel. Alapértelmezésben négy kategória van: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós, azonban lehet újakat létrehozni.
   1. nehézségi szint neve: szöveges mező
   2. lehetséges válaszok számának meghatározása: 2/4
-- **nehézségi szintek listázása, szerkessztése, törlése**
+- **nehézségi szintek listázása, szerkesztése, törlése**
   1. az elérhető nehézségi szintek egy listában jelennek meg.
   2. a lista oszlopai: id, nehézségi szint megnevezése, válaszok száma, szerkesztés, törlés.
   3. a szerkesztés gombra kattintva a **nehézségi szint létrehozása** oldal jelenik meg, és a nehézségi szint szerkeszthető.
@@ -95,10 +95,17 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
   3. a lista oszlopai: id, kérdés, típus, válaszok száma, nehézségi szint(ek), aktív, szerkesztés, törlés
   4. a szerkesztés gombra kattinva az **új kérdés felvitele** oldal jelenik meg, és a kérdés szerkeszthető.
   5. a törlés gombra kattintva megerősítő felölet jelenik meg: igen/nem
+- **kiértékelő üzenenet létrehozása**
+Adott sávhatáronként, a teljesítményétől függően más és más kiértékelő üzenertet kap a felhasználó.
+  - 25% alatt: szöveges mező.
+  - 26-50% között: szöveges mező.
+  - 51-75% között: szöveges mező.
+  - 75% fölött: szöveges mező.
  
 **Phase 2**
 
 - [ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
+- [ ] Többféle kiértékelő üzenet, a **kiértékelő üzenetek listázása, szerkesztése, törlése** felület, valamint a sávhatárok beállításának lehetősége.
 
 ## Általános adminisztráció
 Mivel az eszköz kioszk módban indul, ezért **szükség** van a távoli menedzsmentre. Az eszköz rendelkezik internetes kapcsolattal.
