@@ -28,10 +28,26 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 #### Admin
 
 ### Kvíz
+#### Felület
+**Phase 1**
+- A kvíz több **nehézségi szintet** támogat: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós.
+- A kvíz több **hosszúságot** támogat: a felhasználó a kvíz indításakor dönti el, hogy hány kérdést szeretne kapni. Itt majd kísérletezni kell az idővel, de a rövid (10), közepes (20) és hosszú (30) valószínáleg elég lesz. A gyerek szinten mindenképp 5-10 kérdés van, mert ott szükség van a kísérő segítségére, és sok kérdésnél a gyerekek elunnák magukat.
+  - A kérdések adatbázisból érkeznek, véletlenszerűen. Ennek alapfeltétele, hogy az adatbázisban a kérdések tartalmazzanak egy **nehézség-jelölőt**, ami mentén leválogatja a megjelenítő kérdéseket.
+- A kvíz egyetlen **kérdéstípust** támogat: feleletválasztós, 2 vagy 4 lehetséges válasszal.
+  - kétféle feleletválasztós mód: csak szöveges, csak kép (ilyenkor a kérdés ugyanúgy szöveges)
+  - a gyerek nehézségi szinten 2 lehetséges válasz van, és a válaszok képek, hogy a gyerek dönthessen (praktikusan ilyenkor a kísérő olvassa fel a kérdést, amit a gyerek dönt el).
+- A kvíz végén **kiértékelés** van.
+  - A felhasználó megtudja a helyes válaszainak számát, illetve az összes kérdés számát.
+  - Az elért pontszám arányában véletlenszerű üzenetet kap. 25% alatt, 26-50%, 51-75% között és 75% fölött más-más az üzenet.
+ 
+**Phase 2**
+- Újabb kérdéstípusok.
+- Toplista
+
 A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre való visszatérésre.
 
-#### Felület
 #### Admin
+- 
 
 ## Általános adminisztráció
 Mivel az eszköz kioszk módban indul, ezért **szükség** van a távoli menedzsmentre. Az eszköz rendelkezik internetes kapcsolattal.
