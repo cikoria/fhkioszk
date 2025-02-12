@@ -48,13 +48,15 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
  
 **Phase 2**
 
-[ ] Újabb kérdéstípusok.
-[ ] Toplista nehézségis szintenként.
+- [ ] Újabb kérdéstípusok.
+- [ ] Toplista nehézségi szintenként.
 
 A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre való visszatérésre.
 
 #### Admin
 **Phase 1**
+
+Az admin felületnek nem szükséges autentikáció.
 
 A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell támogatnia:
 - **nehézségi szint létrehozása** -> esetünkben a nehézségi szint egyenlő az önálló kvízzel. Alapértelmezésben négy kategória van: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós, azonban lehet újakat létrehozni.
@@ -83,7 +85,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
  
 **Phase 2**
 
-[ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
+- [ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
 
 ## Általános adminisztráció
 Mivel az eszköz kioszk módban indul, ezért **szükség** van a távoli menedzsmentre. Az eszköz rendelkezik internetes kapcsolattal.
