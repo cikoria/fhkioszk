@@ -30,6 +30,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 ### Kvíz
 #### Felület
 **Phase 1**
+
 - A kvíz több **nehézségi szintet** támogat: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós.
 - A kvíz több **hosszúságot** támogat: a felhasználó a kvíz indításakor dönti el, hogy hány kérdést szeretne kapni. Itt majd kísérletezni kell az idővel, de a rövid (10), közepes (20) és hosszú (30) valószínáleg elég lesz. A gyerek szinten mindenképp 5-10 kérdés van, mert ott szükség van a kísérő segítségére, és sok kérdésnél a gyerekek elunnák magukat.
   - A kérdések adatbázisból érkeznek, véletlenszerűen. Ennek alapfeltétele, hogy az adatbázisban a kérdések tartalmazzanak egy **nehézség-jelölőt**, ami mentén leválogatja a megjelenítő kérdéseket.
@@ -46,6 +47,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 - A kvíz **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn.
  
 **Phase 2**
+
 [ ] Újabb kérdéstípusok.
 [ ] Toplista nehézségis szintenként.
 
@@ -53,6 +55,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 
 #### Admin
 **Phase 1**
+
 A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell támogatnia:
 - **nehézségi szint létrehozása** -> esetünkben a nehézségi szint egyenlő az önálló kvízzel. Alapértelmezésben négy kategória van: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós, azonban lehet újakat létrehozni.
   1. nehézségi szint neve: szöveges mező
@@ -79,6 +82,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
   5. a törlés gombra kattintva megerősítő felölet jelenik meg: igen/nem
  
 **Phase 2**
+
 [ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
 
 ## Általános adminisztráció
