@@ -50,14 +50,14 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 - A **második oldalon**, **amennyiben nem** a gyerek nehézségi szintent választotta, kilistázásra kerülnek a kvízek hosszúságai. A felhasználó koppintással dönt. Ezt követően indul a kvíz.
 - A **kvízkérdések oldalai**:
   - Indikátor, ahol a felhasználó láthatja, hogy hány kérdésnél tart, valamint az összes kérdések száma.
-> [!NOTE]
-> A helyes válaszok számolása kvíz közben: **döntést igényel**.
   - Szöveges kérdés esetén:
-    - Kérdés.
-    - A lehetséges válaszok. A felhasználó az egyik **szövegre koppintással** dönti el, hogy szerinte melyik a helyes.
+   - Kérdés.
+   - A lehetséges válaszok. A felhasználó az egyik **szövegre koppintással** dönti el, hogy szerinte melyik a helyes.
   - Képes kérdés esetén:
     - Kérdés.
     - A lehetséges válaszok képei. A felhasználó az egyik **képre koppintással** dönti el, hogy szerinte melyik a helyes.
+> [!NOTE]
+> A helyes válaszok számolása kvíz közben: **döntést igényel**.
 - **Kiértékelő oldal**:
   - A felhasználó megtudja a helyes válaszainak számát, illetve az összes kérdés számát.
   - Az elért pontszám arányában véletlenszerű üzenetet kap.
