@@ -28,7 +28,6 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 #### Admin
 
 ### Kvíz
-#### Felület
 **Phase 1**
 
 - A kvíz több **nehézségi szintet** támogat: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós.
@@ -39,12 +38,26 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
   - a gyerek nehézségi szinten 2 lehetséges válasz van, és a válaszok képek, hogy a gyerek dönthessen (praktikusan ilyenkor a kísérő olvassa fel a kérdést, amit a gyerek dönt el).
   - a felhasználó - kérdéstípustól függően - a válasz szövegére vagy a képére koppintással dönt.
   - **#TODO** a továbblépésnek két lehetséges módja van, erről **dönteni kell**
-    1. kell megerősítés a döntést követően (tovább gomb).
-    2. nem kell megerősítés.
+      1. kell megerősítés a döntést követően (tovább gomb).
+      2. nem kell megerősítés.
 - A kvíz végén **kiértékelés** van.
+ 
+#### Felület
+- A kvíz indító felülete egy **üdvözlő képernyő**, ahol kilistázásra kerülnek a nehézségi szintek. A felhasználók egy nehézségi szintre koppintással dönti el, hogy melyik kvízt szeretné kitölteni.
+- A **második oldalon**, **amennyiben nem** a gyerek nehézségi szintent választotta, kilistázásra kerülnek a kvízek hosszúságai. A felhasználó koppintással dönt. Ezt követően indul a kvíz.
+- A **kvízkérdések oldalai**:
+  - Indikátor, ahol a felhasználó láthatja, hogy hány kérdésnél tart, valamint az összes kérdések száma. **#TODO** a helyes válaszok számolása kvíz közben **döntést igényel**.
+  - Szöveges kérdés esetén:
+    - Kérdés.
+    - A lehetséges válaszok. A felhasználó az egyik **szövegre koppintással** dönti el, hogy szerinte melyik a helyes.
+  - Képes kérdés esetén:
+    - Kérdés.
+    - A lehetséges válaszok képei. A felhasználó az egyik **képre koppintással** dönti el, hogy szerinte melyik a helyes.
+- **Kiértékelő oldal**:
   - A felhasználó megtudja a helyes válaszainak számát, illetve az összes kérdés számát.
   - Az elért pontszám arányában véletlenszerű üzenetet kap. 25% alatt, 26-50%, 51-75% között és 75% fölött más-más az üzenet.
-- A kvíz **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn.
+  - Visszatérés gomb az üdvözlő képernyőre.
+- A kvíz az első oldal, vagyis az üdvözlő képernyő kivételével **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn. Amennyiben a felhasználó már egy kérdést tartalmazó oldalon van, megerősítő felület jelenik meg: kilépek/folytatom. A kilépekre koppintás esetén visszatér az üdvözlő képernyőre.
  
 **Phase 2**
 
@@ -64,7 +77,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
   2. lehetséges válaszok számának meghatározása: 2/4
 - **nehézségi szintek listázása, szerkessztése, törlése**
   1. az elérhető nehézségi szintek egy listában jelennek meg.
-  2. a lista oszlopai: id, nehézségi szint megnevezése, szerkesztés, törlés.
+  2. a lista oszlopai: id, nehézségi szint megnevezése, válaszok száma, szerkesztés, törlés.
   3. a szerkesztés gombra kattintva a **nehézségi szint létrehozása** oldal jelenik meg, és a nehézségi szint szerkeszthető.
   4. a törlés gombra kattinva megerősítő ablak felület meg: igen/nem.
      - igen válasz esetén a felhasználónak döntenie kell, hogy a nehézségi szinthez tartozó kérdéseket a rendszer melyik másik nehézségi szinthez rendelje hozzá, vagy hagyja nehézségi szint nélkül.
