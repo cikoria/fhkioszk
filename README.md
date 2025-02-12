@@ -7,9 +7,9 @@ Egyszerű kioszk a Futball házba
 
 - [Általános leírás](#általános-leírás)
 - [Felületek](#felületek)
-  - [Központi felület](központi-felület)
-  - [Információs rendszer](információs-rendszer)
-  - [Kvíz](kvíz)
+  - [Központi felület](#központi-felület)
+  - [Információs rendszer](#információs-rendszer)
+  - [Kvíz](#kvíz)
 - [Általános adminisztráció](#általános-adminisztráció)
 - [Környezet](#környezet)
 
