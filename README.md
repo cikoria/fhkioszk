@@ -96,11 +96,11 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
   4. a szerkesztés gombra kattinva az **új kérdés felvitele** oldal jelenik meg, és a kérdés szerkeszthető.
   5. a törlés gombra kattintva megerősítő felölet jelenik meg: igen/nem
 - **kiértékelő üzenenet létrehozása**
-Adott sávhatáronként, a teljesítményétől függően más és más kiértékelő üzenertet kap a felhasználó.
-  - 25% alatt: szöveges mező.
-  - 26-50% között: szöveges mező.
-  - 51-75% között: szöveges mező.
-  - 75% fölött: szöveges mező.
+  - Adott sávhatáronként, a teljesítményétől függően más és más kiértékelő üzenertet kap a felhasználó.
+    - 25% alatt: szöveges mező.
+    - 26-50% között: szöveges mező.
+    - 51-75% között: szöveges mező.
+    - 75% fölött: szöveges mező.
  
 **Phase 2**
 
