@@ -7,7 +7,7 @@ Egyszerű kioszk a Futball házba
 
 - [Általános leírás](#általános-leírás)
 - [Felületek](#felületek)
-  - [Központi felület](#központi-felület)
+  - [Központi képernyő](#központi-képernyő)
   - [Információs rendszer](#információs-rendszer)
   - [Kvíz](#kvíz)
 - [Általános adminisztráció](#általános-adminisztráció)
@@ -34,20 +34,52 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 - A kvíz több **hosszúságot** támogat: a felhasználó a kvíz indításakor dönti el, hogy hány kérdést szeretne kapni. Itt majd kísérletezni kell az idővel, de a rövid (10), közepes (20) és hosszú (30) valószínáleg elég lesz. A gyerek szinten mindenképp 5-10 kérdés van, mert ott szükség van a kísérő segítségére, és sok kérdésnél a gyerekek elunnák magukat.
   - A kérdések adatbázisból érkeznek, véletlenszerűen. Ennek alapfeltétele, hogy az adatbázisban a kérdések tartalmazzanak egy **nehézség-jelölőt**, ami mentén leválogatja a megjelenítő kérdéseket.
 - A kvíz egyetlen **kérdéstípust** támogat: feleletválasztós, 2 vagy 4 lehetséges válasszal.
-  - kétféle feleletválasztós mód: csak szöveges, csak kép (ilyenkor a kérdés ugyanúgy szöveges)
+  - kétféle feleletválasztós mód: csak szöveges, csak kép (ilyenkor a kérdés ugyanúgy szöveges).
   - a gyerek nehézségi szinten 2 lehetséges válasz van, és a válaszok képek, hogy a gyerek dönthessen (praktikusan ilyenkor a kísérő olvassa fel a kérdést, amit a gyerek dönt el).
+  - a felhasználó - kérdéstípustól függően - a válasz szövegére vagy a képére koppintással dönt.
+  - **#TODO** a továbblépésnek két lehetséges módja van, erről **dönteni kell**
+    1. kell megerősítés a döntést követően (tovább gomb).
+    2. nem kell megerősítés.
 - A kvíz végén **kiértékelés** van.
   - A felhasználó megtudja a helyes válaszainak számát, illetve az összes kérdés számát.
   - Az elért pontszám arányában véletlenszerű üzenetet kap. 25% alatt, 26-50%, 51-75% között és 75% fölött más-más az üzenet.
+- A kvíz **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn.
  
 **Phase 2**
-- Újabb kérdéstípusok.
-- Toplista
+[ ] Újabb kérdéstípusok.
+[ ] Toplista nehézségis szintenként.
 
 A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre való visszatérésre.
 
 #### Admin
-- 
+**Phase 1**
+A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell támogatnia:
+- **nehézségi szint létrehozása** -> esetünkben a nehézségi szint egyenlő az önálló kvízzel. Alapértelmezésben négy kategória van: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós, azonban lehet újakat létrehozni.
+  1. nehézségi szint neve: szöveges mező
+  2. lehetséges válaszok számának meghatározása: 2/4
+- **nehézségi szintek listázása, szerkessztése, törlése**
+  1. az elérhető nehézségi szintek egy listában jelennek meg.
+  2. a lista oszlopai: id, nehézségi szint megnevezése, szerkesztés, törlés.
+  3. a szerkesztés gombra kattintva a **nehézségi szint létrehozása** oldal jelenik meg, és a nehézségi szint szerkeszthető.
+  4. a törlés gombra kattinva megerősítő ablak felület meg: igen/nem.
+     - igen válasz esetén a felhasználónak döntenie kell, hogy a nehézségi szinthez tartozó kérdéseket a rendszer melyik másik nehézségi szinthez rendelje hozzá, vagy hagyja nehézségi szint nélkül.
+     - a törlés csak ezt követően valósul meg.
+- **új kérdés felvitele** ->
+  1. kérdés beírása: szöveges mező
+  2. kérdés típusa: szöveg/kép
+  3. válaszok megadása: négy szöveges mező/négy filefelöltési lehetőség. Képes válasz esetén a képek megjelennek bélyegkép méretben, cseréjük a feltöltés gomb ismételt megnyomásával lehetséges.
+  4. helyes válasz megadása: négy gomb
+  5. nehézségi szint megadása: gombként kilistáva az ismert nehézségi szintek -> **!** egy kérdéshez több nehézségi szint is tartozhat, vagy egy sem!
+  6. a kérdés aktív: igen/nem -> nem esetén a rendszer nem veszi figyelembe a kérdést a kvízek létrehozásakor.
+- **kérdések listázása, szerkesztése, törlése**
+  1. az elérhető kérdések egy listában jelennek meg.
+  2. a csoportos műveletek nem képezik a **Phase 1** részét.
+  3. a lista oszlopai: id, kérdés, típus, válaszok száma, nehézségi szint(ek), aktív, szerkesztés, törlés
+  4. a szerkesztés gombra kattinva az **új kérdés felvitele** oldal jelenik meg, és a kérdés szerkeszthető.
+  5. a törlés gombra kattintva megerősítő felölet jelenik meg: igen/nem
+ 
+**Phase 2**
+[ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
 
 ## Általános adminisztráció
 Mivel az eszköz kioszk módban indul, ezért **szükség** van a távoli menedzsmentre. Az eszköz rendelkezik internetes kapcsolattal.
