@@ -10,6 +10,8 @@ Egyszerű kioszk a Futball házba
   - [Központi képernyő](#központi-képernyő)
   - [Információs rendszer](#információs-rendszer)
   - [Kvíz](#kvíz)
+    - [Kvíz felület](#kvíz-felület)
+    - [Kvíz admin](#kvíz-admin)
 - [Általános adminisztráció](#általános-adminisztráció)
 - [Környezet](#környezet)
 
@@ -28,7 +30,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
 #### Admin
 
 ### Kvíz
-**Phase 1**
+**[Phase 1]**
 
 - A kvíz több **nehézségi szintet** támogat: gyerek (nem tud olvasni), iskolás, felnőtt, Kispest-tudós.
 - A kvíz több **hosszúságot** támogat: a felhasználó a kvíz indításakor dönti el, hogy hány kérdést szeretne kapni. Itt majd kísérletezni kell az idővel, de a rövid (10), közepes (20) és hosszú (30) valószínáleg elég lesz. A gyerek szinten mindenképp 5-10 kérdés van, mert ott szükség van a kísérő segítségére, és sok kérdésnél a gyerekek elunnák magukat.
@@ -42,7 +44,7 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
       2. nem kell megerősítés.
 - A kvíz végén **kiértékelés** van.
  
-#### Felület
+#### Kvíz felület
 - A kvíz indító felülete egy **üdvözlő képernyő**, ahol kilistázásra kerülnek a nehézségi szintek. A felhasználók egy nehézségi szintre koppintással dönti el, hogy melyik kvízt szeretné kitölteni.
 - A **második oldalon**, **amennyiben nem** a gyerek nehézségi szintent választotta, kilistázásra kerülnek a kvízek hosszúságai. A felhasználó koppintással dönt. Ezt követően indul a kvíz.
 - A **kvízkérdések oldalai**:
@@ -59,15 +61,15 @@ A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre v
   - Visszatérés gomb az üdvözlő képernyőre.
 - A kvíz az első oldal, vagyis az üdvözlő képernyő kivételével **bármikor megszakítható** a főképernyőre visszatéréssel. Ehhez egy jól látható gombnak kell lennie a képernyőn. Amennyiben a felhasználó már egy kérdést tartalmazó oldalon van, megerősítő felület jelenik meg: kilépek/folytatom. A kilépekre koppintás esetén visszatér az üdvözlő képernyőre.
  
-**Phase 2**
+**[Phase 2]**
 
 - [ ] Újabb kérdéstípusok.
 - [ ] Toplista nehézségi szintenként.
 
 A felület **minden oldalán** lehetőséget biztosít a közonti képernyőre való visszatérésre.
 
-#### Admin
-**Phase 1**
+#### Kvíz admin
+**[Phase 1]**
 
 Az admin felületnek nem szükséges autentikáció.
 
@@ -91,7 +93,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
   6. a kérdés aktív: igen/nem -> nem esetén a rendszer nem veszi figyelembe a kérdést a kvízek létrehozásakor.
 - **kérdések listázása, szerkesztése, törlése**
   1. az elérhető kérdések egy listában jelennek meg.
-  2. a csoportos műveletek nem képezik a **Phase 1** részét.
+  2. a csoportos műveletek nem képezik a **[Phase 1]** részét.
   3. a lista oszlopai: id, kérdés, típus, válaszok száma, nehézségi szint(ek), aktív, szerkesztés, törlés
   4. a szerkesztés gombra kattinva az **új kérdés felvitele** oldal jelenik meg, és a kérdés szerkeszthető.
   5. a törlés gombra kattintva megerősítő felölet jelenik meg: igen/nem
@@ -102,7 +104,7 @@ A kvíz adatbázisból dolgozik. Az admin felületnek a következőket kell tám
     - 51-75% között: szöveges mező.
     - 75% fölött: szöveges mező.
  
-**Phase 2**
+**[Phase 2]**
 
 - [ ] Kérdések importálása nehézségi szint létrehozásakor más nehézségi szintekből.
 - [ ] Többféle kiértékelő üzenet, a **kiértékelő üzenetek listázása, szerkesztése, törlése** felület, valamint a sávhatárok beállításának lehetősége.
