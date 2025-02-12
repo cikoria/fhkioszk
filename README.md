@@ -21,6 +21,7 @@ Az eszköz **kioszk módban** indul, vagyis a teljes felületet egyetlen böngé
 A felhasználónak a központi képernyőn lehetősége van választani, hogy a Futball ház információs rendszerét, vagy a kvízalkalmazást indítja el.
 
 A központi képernyő szerkezete egyszerű:
+- üdvözlő üzenet, valamint
 - a képernyő közepén a két választási lehetőség megjelenítése.
 
 ### Információs rendszer
